@@ -1,25 +1,3 @@
-/*++
-
-Copyright (c) Alex Ionescu.  All rights reserved.
-
-Module Name:
-
-	shvos.c
-
-Abstract:
-
-	This module implements the OS-facing UEFI stubs for SimpleVisor.
-
-Author:
-
-	Alex Ionescu (@aionescu) 29-Aug-2016 - Initial version
-
-Environment:
-
-	Kernel mode only.
-
---*/
-
 //
 // Basic UEFI Libraries
 //
@@ -202,8 +180,8 @@ EFIAPI PerFileFunc(
 
 #define MAX_EFI_FILE_ARRAY_SIZE 1024
 typedef struct {
-	CHAR16 FileName[1024];
-	CHAR16 FilePath[1024];
+	CHAR16 FileName[512];
+	CHAR16 FilePath[512];
 	CHAR16 Volume[128];
 	UINT64 FileSize;
 } EfiFile;
