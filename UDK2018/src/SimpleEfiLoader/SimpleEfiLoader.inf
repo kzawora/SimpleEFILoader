@@ -1,0 +1,41 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = SimpleEfiLoader
+  FILE_GUID                      = 4c1c892f-c2f3-4b13-8e7e-a617752b6eda
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+  
+[Sources]
+  SimpleEfiLoader.c
+  CommonHeader.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+  
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  UefiBootServicesTableLib
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  ShellLib
+
+[Guids]
+  gEfiFileSystemInfoGuid
+  
+[Ppis]
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiBlockIoProtocolGuid
+  gEfiLoadedImageProtocolGuid
+
+[FeaturePcd]
+
+[Pcd]
