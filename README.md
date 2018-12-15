@@ -9,3 +9,5 @@ Tools used for development were
 ### What's inside
 In this repo, you can find two versions of project, one for VisualUefi and other for UDK2018. They are similar, but VisualUefi is a bit outdated version, and the entire loader is made on top of simple sample Hello World project.
 Both versions contain .efi binary and source code.
+
+The code was tested only on QEMU, running from EFI Shell, on a OVMF bios image.
